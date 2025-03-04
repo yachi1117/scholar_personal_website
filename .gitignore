@@ -19,6 +19,15 @@
 
 npm-debug.log*
 yarn-debug.log*
-yarn-error.log* 
+yarn-error.log*
+
+# media files
+/public/images/*
+/public/videos/*
+
+# Keep the placeholder files
+!/public/images/.gitkeep
+!/public/videos/.gitkeep
+
 node_modules
 node_modules
