@@ -1,0 +1,80 @@
+:root {
+  /* 主色调 */
+  --primary: #4f9fff;
+  --primary-light: #7eb8ff;
+  --primary-dark: #2d7eeb;
+  
+  /* 强调色 */
+  --accent: #ffd700;
+  --accent-light: #ffe44d;
+  --accent-dark: #ccac00;
+  
+  /* 中性色 */
+  --background: #ffffff;
+  --surface: #f8f9fc;
+  --text-primary: #2c3e50;
+  --text-secondary: #666666;
+  
+  /* 交互状态 */
+  --hover-bg: rgba(79, 159, 255, 0.05);
+  --active-bg: rgba(79, 159, 255, 0.1);
+  
+  /* 动画时间 */
+  --transition-fast: 0.2s;
+  --transition-normal: 0.3s;
+  --transition-slow: 0.5s;
+}
+
+/* 全局过渡动画 */
+.page-transition-enter {
+  opacity: 0;
+  transform: translateY(20px);
+  position: absolute;
+  width: 100%;
+}
+
+.page-transition-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-out;
+}
+
+.page-transition-exit {
+  opacity: 1;
+  transform: translateY(0);
+  position: absolute;
+  width: 100%;
+}
+
+.page-transition-exit-active {
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-out;
+}
+
+/* 全局hover效果 */
+.hover-lift {
+  transition: transform var(--transition-normal);
+}
+
+.hover-lift:hover {
+  transform: translateY(-2px);
+}
+
+/* 全局卡片样式 */
+.card {
+  background: var(--background);
+  border-radius: 16px;
+  box-shadow: 
+    0 4px 12px rgba(0, 0, 0, 0.05),
+    0 1px 2px rgba(0, 0, 0, 0.02);
+  transition: all var(--transition-normal);
+  border: 1px solid rgba(79, 159, 255, 0.1);
+}
+
+.card:hover {
+  box-shadow: 
+    0 8px 24px rgba(79, 159, 255, 0.1),
+    0 2px 4px rgba(79, 159, 255, 0.05);
+  border-color: var(--primary-light);
+} 
